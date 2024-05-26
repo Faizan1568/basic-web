@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faizan's Website</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <p>Hydrogen : H<sub>2</sub>O</p>
+
+    <p>a<sup>2</sup> + b<sup>2</sup></p>
+
+    <pre>
+        <abbr title="my own program">#program to find prime numbers</abbr>
+        import java.util.Arrays;
+        import java.util.Scanner;
+        
+        public class SieveOfEratosthenes {
+        
+            public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+                System.out.print("Find all prime numbers up to: ");
+                int n = scanner.nextInt();
+                scanner.close();
+                
+                boolean[] isPrime = new boolean[n + 1];
+                Arrays.fill(isPrime, true);
+                isPrime[0] = false;
+                isPrime[1] = false;
+        
+                for (int p = 2; p * p <= n; p++) {
+                    if (isPrime[p]) {
+                        for (int i = p * p; i <= n; i += p) {
+                            isPrime[i] = false;
+                        }
+                    }
+                }
+        
+                System.out.print("Prime numbers up to " + n + ": ");
+                for (int i = 2; i <= n; i++) {
+                    if (isPrime[i]) {
+                        System.out.print(i + " ");
+                    }
+                }
+            }
+        }
+        </pre>
+
+        <p>to visit the google : <a href="https://gooogle.com/">google.com</a></p>
+
+        <a href="https://www.youtube.com/watch?v=HcOc7P5BMi4&list=PLfqMhTWNBTe0PY9xunOzsP5kmYIz2Hu7i&index=1&ab_channel=ApnaCollege" target="_main">  
+            <img src="calc.png" alt="calclogo">
+        </a>
+        <hr />
+        <img src="calc.png" alt="calclogo" height="50px">
+        <br>
+        <img src="calc.png" alt="calclogo" width="150px" height="100">
+
+      <caption>Results </caption>
+        <table>
+            <thead>
+                <th>roll NO</th>
+                <th>Name</th>
+                <th>Percentage</th>
+            </thead>
+
+            <tbody>
+                <tr>
+                <td>101</td>
+                <td>Faizan</td>
+                <td rowspan="2">99.70</td>
+            </tr>
+            <tr>
+                <td>110</td>
+                <td>Rehan</td>
+                <!-- <td>99.70</td> -->
+            </tr>
+            <tr>
+                <td>102</td>
+                <td colspan="2">xyz</td>
+                <!-- <td>99.70</td> -->
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>abc</td>
+                <td>99.70</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        <br>
+
+        <form action="">
+
+            <label for="name">Name</label> <br>
+            <input type="text" name="name" id="name" placeholder="Enter your full name"><br>
+
+            <label for="age">Age</label><br>
+            <input type="number" name="age" id="age" placeholder="Enter your age"><br>
+
+            <label for="dob">DOB</label> <br>
+            <input type="date" name="dob" id="dob"><br>
+
+            <label for="gender">gender</label> <br>
+            Male<input type="radio" name="gender" id="gender"><br>
+            Female<input type="radio" name="gender" id="gender"><br>
+
+            <label for="subjects">Subjects</label> <br>
+            NGD<input type="radio" name="NGD" id="ngd"><br>
+            OS <input type="radio" name="OS" id="os"><br>
+            SE <input type="radio" name="SE" id="se"><br>
+            C++ <input type="radio" name="cpp" id="cpp"><br>
+
+            <label for="year">Year : </label> <br>
+            <select>
+                <option value="1st year">1st Year</option>
+                <option value="2nd year">2nd Year</option>
+                <option value="3rd year">3rd Year</option>
+            </select>
+
+            <label for="Feedback">Feedback</label><br>
+            <textarea name="feedback" id="feedback"></textarea><br>
+
+            <button>Submit</button>
+        </form>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HcOc7P5BMi4?si=KVE9zASaEVuXFPrj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example of div Tag</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .header, .content, .footer {
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .header {
+            background-color: #f8f9fa;
+        }
+        .content {
+            background-color: #e9ecef;
+        }
+        .footer {
+            background-color: #f1f3f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to <span style="color: blue; background-color: aqua; font:100;">My Website</span> </h1>
+        </div>
+        <div class="content">
+            <p>This is the main content area.</p>
+        </div>
+        <div class="footer">
+            <p>Footer Information</p>
+        </div>
+    </div>
+</body>
+</html> -->
